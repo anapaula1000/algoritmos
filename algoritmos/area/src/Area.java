@@ -8,6 +8,7 @@ public class Area {
         System.out.println("AreaCilindro is " +  findAreaCilindro(3, 6));
         System.out.println("AreaCube is " +  findAreaCube(3));
         System.out.println("AreaTetra is " +  findAreaTetra(3));
+        System.out.println("VolumeTetra is " +  findVolumeTetra(3));
     }
 
     static final double PI = Math.PI;
@@ -40,10 +41,14 @@ public class Area {
     {
         return 6*(a*a);
     }
-
-    static double findAreaTetra(int s)
+    static double findAreaTetra(int side)
+    {
+        return (Math.sqrt(3) * (side * side));
+    }
+    static double findVolumeTetra(int s)
     {
         double vol = (double)Math.round((Math.pow(s, 3) / (6 * Math.sqrt(2))) * 100) / 100;
         return vol;
     }
 }
+
